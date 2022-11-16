@@ -4,26 +4,30 @@
 
 <head>
   <style>
+    body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
     #wrap {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row;
       justify-content: space-evenly;
-      gap: 40px;
+      gap: 10px;
     }
 
     .button {
-      width: 200px;
-      height: 200px;
-      background-color: steelblue;
-      color: white;
-      font-size: 2em;
+      width: 30vw;
+      height: 30vw;
+      line-height: 30vw;
       text-align: center;
-      padding: 20px;
-      border-radius: 8%;
-      margin: 40px;
+      background-color: #232D4B;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
 
     .button-text {
+      line-height: 8vw;
       display: inline-block;
       vertical-align: middle;
     }
@@ -33,8 +37,25 @@
       text-decoration: none;
     }
 
+    .visit {
+      font-size: 8vw;
+      background-color: #E57200;
+    }
+
+    .form {
+      font-size: 6vw;
+    }
+    .qr {
+      padding: 0px;
+      margin: 0px;
+      font-size: 3vw;
+      text-align: center;
+    }
+
     img {
-      width: 30%;
+      width: 30vw;
+      padding: 0px;
+      margin: 0px;
     }
   </style>
 
@@ -43,19 +64,20 @@
 <body>
   <div id="wrap">
 
-    <a href="https://eepurl.com/hXIWCb">
-      <div class="button">
-        <p class="button-text">Newsletter Signup</p>
-      </div>
-    </a>
-
     <a href="https://forms.gle/C7GpEzAqBLioDnfR7">
-      <div class="button">
+      <div class="button visit">
         <p class="button-text">Add Visit</p>
       </div>
     </a>
 
-    <img src="qr.gif" alt="newsletter QR code">
+    <p class="qr"><img src="qr.gif" alt="newsletter QR code">
+    Newsletter Signup</p>
+
+    <a href="https://eepurl.com/hXIWCb">
+      <div class="button form">
+        <p class="button-text">Newsletter Signup Form</p>
+      </div>
+    </a>
 
   </div>
 </body>
