@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #wrap {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        gap: 10px;
+        align-items: stretch;
+        margin-top: 18vh;
+      }
 
-<head>
-  <style>
-    body {
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    #wrap {
-      display: flex;
-      flex-flow: row;
-      justify-content: space-evenly;
-      gap: 10px;
-      align-items: stretch;
-      margin-top: 18vh;
-    }
+      .button {
+        width: 30vw;
+        height: 30vw;
+        line-height: 30vw;
+        text-align: center;
+        background-color: #232d4b;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
 
-    .button {
-      width: 30vw;
-      height: 30vw;
-      line-height: 30vw;
-      text-align: center;
-      background-color: #232D4B;
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
+      .button-text {
+        line-height: 8vw;
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-    .button-text {
-      line-height: 8vw;
-      display: inline-block;
-      vertical-align: middle;
-    }
+      .button-text a {
+        color: white;
+        text-decoration: none;
+      }
 
-    .button-text a {
-      color: white;
-      text-decoration: none;
-    }
+      .visit {
+        font-size: 8vw;
+        background-color: #e57200;
+      }
 
-    .visit {
-      font-size: 8vw;
-      background-color: #E57200;
-    }
+      .form {
+        font-size: 6vw;
+      }
+      .qr {
+        padding: 0px;
+        margin: 0px;
+        font-size: 3vw;
+        text-align: center;
+      }
 
-    .form {
-      font-size: 6vw;
-    }
-    .qr {
-      padding: 0px;
-      margin: 0px;
-      font-size: 3vw;
-      text-align: center;
-    }
+      img {
+        width: 30vw;
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+  </head>
 
-    img {
-      width: 30vw;
-      padding: 0px;
-      margin: 0px;
-    }
-  </style>
-
-</head>
-
-<body>
-  <div id="wrap">
-
-    <a href="https://forms.gle/C7GpEzAqBLioDnfR7">
-      <div class="button visit">
-        <p class="button-text">Add Visit</p>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div id="wrap">
+      <div>
+        <script src="https://cal.lib.virginia.edu/js/hours_grid.js?002"></script>
+        <div id="s-lc-whw2093"></div>
+        <script>
+          $(function () {
+            var week2093 = new $.LibCalWeeklyGrid($("#s-lc-whw2093"), {
+              iid: 863,
+              lid: 2093,
+              systemTime: false,
+            })
+          })
+        </script>
       </div>
-    </a>
-
-    <p class="qr"><img src="qr.gif" alt="newsletter QR code">
-    Newsletter Signup</p>
-
-    <a href="https://eepurl.com/hXIWCb">
-      <div class="button form">
-        <p class="button-text">Newsletter Signup Form</p>
-      </div>
-    </a>
-
-  </div>
-</body>
-
+    </div>
+  </body>
 </html>
