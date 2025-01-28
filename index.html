@@ -7,6 +7,9 @@
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         font-size: 1.4rem;
+        background: url('logo.png') no-repeat;
+        background-size: 20%;
+        background-position: center top;
       }
       #wrap {
         display: flex;
@@ -14,18 +17,35 @@
         justify-content: center;
         gap: 10px;
         align-items: center;
-        margin-top: 18vh;
+        margin-top: 50vh;
       }
-      .sr-only {display:none;}
-      .s-lc-whw-bh {display:none;}
-      #s-lc-whw-subloc-2093 {display:none;}
+      .sr-only {
+        display: none;
+      }
+      .s-lc-whw-bh {
+        display: none;
+      }
+      #s-lc-whw-subloc-2093 {
+        display: none;
+      }
       .table {
         width: 100%;
       }
-      tbody td { 
+      tbody td {
         text-align: center;
         vertical-align: top;
         padding: 10px;
+      }
+
+      .s-lc-whw-today-h,
+      .s-lc-whw-today {
+        color: #E63418; 
+      }
+
+      #tagline {
+        color: #aaa;
+        text-align: center;
+        margin-top: 20px;
       }
     </style>
   </head>
@@ -33,7 +53,6 @@
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <div id="wrap">
-      <h1>Makerspace Hours</h1>
       <div>
         <script src="https://cal.lib.virginia.edu/js/hours_grid.js?002"></script>
         <div id="s-lc-whw2093"></div>
@@ -47,6 +66,10 @@
           })
         </script>
       </div>
+      <span id="tagline">
+        Scholars' Lab Makerspace <br>
+        Shannon Library<br>
+        University of Virginia</span>
     </div>
   </body>
 </html>
