@@ -26,11 +26,37 @@
         justify-content: center;
         gap: 10px;
         align-items: center;
-        margin-top: 34vh;
+        margin-top: 54vh;
         z-index: 2;
         position: relative;
-        color: white;
+      }
+      .sr-only {
+        display: none;
+      }
+      .s-lc-whw-bh {
+        display: none;
+      }
+      #s-lc-whw-subloc-2093 {
+        display: none;
+      }
+      .table {
+        width: 100%;
+      }
+      tbody td {
         text-align: center;
+        vertical-align: top;
+        padding: 10px;
+      }
+
+      .s-lc-whw-today-h,
+      .s-lc-whw-today {
+        color: #E63418; 
+      }
+
+      #tagline {
+        color: #aaa;
+        text-align: center;
+        margin-top: 80px;
       }
     </style>
   </head>
@@ -41,11 +67,25 @@
   <canvas id="snow-canvas" aria-hidden="true"></canvas>
   <button class="snow-toggle" id="snow-toggle" type="button">Toggle Snow</button>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <div id="wrap">
-      <h1>Hours:</h1>
-      <p>Friday, Dec 12: 10am - 6pm</p>
-      <p>Saturday, Dec 13: 10am - 4pm</p>
-      <p>The Makerspace is closed from December 14, 2025 until January 5, 2026. Enjoy your break!</p>
+      <div>
+        <script src="https://cal.lib.virginia.edu/js/hours_grid.js?002"></script>
+        <div id="s-lc-whw2093"></div>
+        <script>
+          $(function () {
+            var week2093 = new $.LibCalWeeklyGrid($("#s-lc-whw2093"), {
+              iid: 863,
+              lid: 2093,
+              systemTime: false,
+            })
+          })
+        </script>
+      </div>
+      <span id="tagline">
+        Scholars' Lab Makerspace <br>
+        Shannon Library<br>
+        University of Virginia</span>
     </div>
     <script src="snow.js"></script>
   </body>
